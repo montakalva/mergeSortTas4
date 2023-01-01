@@ -1,8 +1,10 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class MergeSort {
 
-    public void mergeArray(int array[], int firstIndex, int middle, int lastIndex) {
+    public int [] mergeArray(int array[], int firstIndex, int middle, int lastIndex) {
         int l1 = middle - firstIndex + 1;
         int r1 = lastIndex - middle;
 
@@ -45,9 +47,11 @@ public class MergeSort {
             j++;
             k++;
         }
+      //  System.out.println("Arr: " + Arrays.toString(array));
+        return array;
     }
 
-    void sortArray(int array[], int firstIndex, int lastIndex)
+    int [] sortArray(int array[], int firstIndex, int lastIndex)
     {
         if (firstIndex < lastIndex)
         {
@@ -58,6 +62,7 @@ public class MergeSort {
 
             mergeArray(array, firstIndex, middle, lastIndex);
         }
+        return array;
     }
 
     public void printArray(int array[])
